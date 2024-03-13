@@ -7,7 +7,7 @@ services:
     volumes:
       - ./pgdata:/var/lib/postgresql/data
   linkwarden:
-    env_file: .env
+    env_file: stack.env
     environment:
       - DATABASE_URL=postgresql://postgres:${POSTGRES_PASSWORD}@postgres:5432/postgres
     restart: always
